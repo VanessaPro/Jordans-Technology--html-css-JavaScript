@@ -1,5 +1,18 @@
+const imgs = document.getElementById("img");
+const img =document.querySelectorAll("#img img");
 
-document.querySelector("#c2958c26-6378-40c4-9a32-62b9d62c61fd > div")
+let idx = 0;
 
-document.querySelector("#c2958c26-6378-40c4-9a32-62b9d62c61fd > div > div.item.active")
+function carrosel() {
+    idx++; 
+
+    if (idx > img.length -1){
+        idx =0;
+    }
+
+    imgs.style.transform = `translateX(${-idx * 100}px)`;
+}
+
+setInterval(carrosel,1800);
+
 
